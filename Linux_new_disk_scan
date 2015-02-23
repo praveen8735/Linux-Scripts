@@ -1,0 +1,9 @@
+Linux script to scan for new disks.
+
+#!/bin/bash
+
+for newdisks in `ls /sys/class/scsi_host`
+do
+    echo "Rescanning Disks: $newdisks"
+    echo "- - -" > /sys/class/scsi_host/$newdisks/rescan
+done

@@ -1,6 +1,6 @@
 #SSH script to login to multiple servers and execute a command as SUDO
-#StrictHostKeyChecking=no doesnt prompt for RSA key authentication YES/NO
-#Here we are executing "multipath -l" command
+#"StrictHostKeyChecking=no" doesnt prompt for RSA key authentication YES/NO
+#Environment Redhat Linux 5, 6 - Here we are executing "multipath -l" command
 #Save list of serves (IP Address/FQDN) in "hostname.txt" & define your "USER" & "PASS"
 #Run as "./multipath.sh hostname.txt"
 

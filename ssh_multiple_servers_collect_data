@@ -1,7 +1,7 @@
 #SSH script to login to multiple servers and execute a command as SUDO
 #multipath.sh
 #./multipath.sh hostname.txt
-#Save list of serves in hostname.txt and save it
+#Save list of serves in hostname.txt
 #StrictHostKeyChecking=no doesnt prompt for RSA key host
 
 #!/bin/bash

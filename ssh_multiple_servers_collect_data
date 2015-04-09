@@ -1,13 +1,13 @@
 #SSH script to login to multiple servers and execute a command as SUDO
-#multipath.sh
-#./multipath.sh hostname.txt
-#Save list of serves in hostname.txt
-#StrictHostKeyChecking=no doesnt prompt for RSA key host
+#Here we are executing "multipath -l" command
+#After saving the file run as "./multipath.sh hostname.txt"
+#Save list of serves in "hostname.txt" & define your "USER" & "PASS"
+#StrictHostKeyChecking=no doesnt prompt for RSA key authentication YES/NO
 
 #!/bin/bash
-HOST="username"
+USER="username"
 PASS="secret"
 while read line
 do
-    ssh -o StrictHostKeyChecking=no $HOST@"$line" "hostname;echo "$PASS" | sudo -S /sbin/multipath -l;" < /dev/null
+    ssh -o StrictHostKeyChecking=no $USER@"$line" "hostname;echo "$PASS" | sudo -S /sbin/multipath -l;" < /dev/null
 done < "$1"

@@ -1,4 +1,4 @@
-LinuxScripts
+Linux BASH Scripts
 ============
 
-Linux Scripts
+Linux day to day bash scripts

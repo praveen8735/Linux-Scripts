@@ -9,5 +9,5 @@ USER="username"
 PASS="secret"
 while read line
 do
-    ssh -o StrictHostKeyChecking=no $USER@"$line" "hostname;echo "$PASS" | sudo -S /sbin/multipath -l;" < /dev/null
+    ssh -o StrictHostKeyChecking=no "$USER"@"$line" "hostname;echo "$PASS" | sudo -S /sbin/multipath -l;" < /dev/null
 done < "$1"

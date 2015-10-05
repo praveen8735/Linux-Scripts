@@ -10,4 +10,4 @@ then
 else
   echo -e "Name not found" > /dev/null
 fi
-echo '============';done > /tmp/logconf.txt
+echo '============';done > /tmp/name.txt

@@ -1,0 +1,13 @@
+#Script to grep a name and display if that present on any file - ex:/etc/syslog.conf searching for "name"
+#Run as ./name.sh on centralized server having 'rosh' enabled.
+#Save all hostnames in hostname.txt
+#!/bin/bash
+
+for i in $(cat hostname.txt);do rosh -l root -n $i "hostname;cat /etc/syslog.conf|grep -i name > /dev/null"
+if [ $? -eq 0 ]
+then
+  echo -e "\033[1;32mName is Present\033[0m"
+else
+  echo -e "Name not found" > /dev/null
+fi
+echo '============';done > /tmp/logconf.txt
